@@ -1,0 +1,11 @@
+make: Entering directory `/Users/bbrietzke/Development/IndigoArtificial'
+mkdir -p /Users/bbrietzke/Development/IndigoArtificial/bin
+ 
+GOBIN=/Users/bbrietzke/Development/IndigoArtificial/bin go install sigs.k8s.io/controller-tools/cmd/controller-gen@v0.9.0
+ 
+/Users/bbrietzke/Development/IndigoArtificial/bin/controller-gen object:headerFile="hack/boilerplate.go.txt" paths="./..."
+go fmt ./...
+go vet ./...
+go build -o bin/manager main.go
+make: Leaving directory `/Users/bbrietzke/Development/IndigoArtificial'
+ 
